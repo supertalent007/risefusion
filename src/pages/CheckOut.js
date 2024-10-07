@@ -10,30 +10,74 @@ import GoogleIcon from '@mui/icons-material/Google';
 
 const languageModels = [
     {
-        language: 'English'
-    }
+        language: 'English',
+        code: 'EN'
+    },
+    {
+        language: 'Deutsch',
+        code: 'DE'
+    },
+    {
+        language: 'Français',
+        code: 'FR'
+    },
+    {
+        language: 'Italiano',
+        code: 'IT'
+    },
+    {
+        language: 'Español',
+        code: 'ES'
+    },
+    {
+        language: 'Polski',
+        code: 'PL'
+    },
+    {
+        language: 'Română',
+        code: 'RO'
+    },
+    {
+        language: 'Dutch',
+        code: 'NL'
+    },
+    {
+        language: 'Ελληνικά',
+        code: 'EL'
+    },
+    {
+        language: 'Česky',
+        code: 'CS'
+    },
+    {
+        language: 'Português',
+        code: 'PT'
+    },
+    {
+        language: 'Magyar',
+        code: 'HU'
+    },
+    {
+        language: 'Български',
+        code: 'BG'
+    },
+    {
+        language: 'Dansk',
+        code: 'DA'
+    },
+    {
+        language: 'Suomi',
+        code: 'FI'
+    },
+    {
+        language: 'Hrvatski',
+        code: 'HR'
+    },
+    {
+        language: 'Svenska',
+        code: 'SV'
+    },
 ]
-
-const names = [
-    'EN',
-    'Van Henry',
-    'April Tucker',
-    'Ralph Hubbard',
-    'Omar Alexander',
-    'Carlos Abbott',
-    'Miriam Wagner',
-    'Bradley Wilkerson',
-    'Virginia Andrews',
-    'Kelly Snyder',
-];
-
-function getStyles(name, personName, theme) {
-    return {
-        fontWeight: personName.includes(name)
-            ? theme.typography.fontWeightMedium
-            : theme.typography.fontWeightRegular,
-    };
-}
 
 export default function MultipleSelectPlaceholder() {
     const theme = useTheme();
@@ -60,10 +104,14 @@ export default function MultipleSelectPlaceholder() {
                                 value={lang}
                                 inputProps={{ 'aria-label': 'Without label' }}
                                 sx={{ height: '28px', borderRadius: '10px', fontSize: '.75rem', color: '#fff', border: 'none' }}
+                                renderValue={(selected) => {
+                                    const selectedModel = languageModels.find(model => model.code === selected);
+                                    return selectedModel ? selectedModel.code : '';
+                                }}
                             >
-                                {names.map((name) => (
-                                    <MenuItem key={name} value={name}>
-                                        {name}
+                                {languageModels.map((model) => (
+                                    <MenuItem key={model.code} value={model.code}>
+                                        {model.language}
                                     </MenuItem>
                                 ))}
                             </Select>
