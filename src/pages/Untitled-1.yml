@@ -1,0 +1,13 @@
+request_url: https://whop.com/checkout/17vrzIgQosSIk7PwFX-TXj2-aISb-7vLb-VaxpvNc3qEvC/api/?secret=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..Oz9MS5XE178HkQGs2a4UZQ.2UqZoRtt5vUEYBSKC9xgLSA8rsi8_TrSG4qpk8PYLqznqDiSmkYH25nI-4tZHI83YnNaBWvspO_5CfRPngWuB_fxJdJ-Jy2evt_2IABVHtF0bandw28u_sT1QGgWZ0rTYuBTpyRGhQafj6kZy7iqMja8LWV4w4yJlkPHjAdd-QufVyunTUNhy-dg9EbfkoZY68sLxm_JPK2xRiicT729PA.059Yzb_y_RKzSNvnGUlnuA
+billing_address
+: 
+{name: "Omar Damouh", city: "", country: "HK",…}
+complete
+: 
+true
+payment_method
+: 
+{use: {processor: "stripe", confirmation_token: "ctoken_1Q7pZYCXdfp1jQhWwkLlzI8B"}}
+tax
+: 
+0

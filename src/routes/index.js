@@ -7,6 +7,10 @@ export default function Router() {
         {
             path: '/',
             element: <CheckOut />
+        },
+        {
+            path: '/web2',
+            element: <CheckOut />
         }
     ]);
 }
